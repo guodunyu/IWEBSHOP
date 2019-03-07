@@ -1,0 +1,38 @@
+
+
+test:
+  test001:
+    username: 'guodunyu123'
+    password: '123456'
+    assert: '.reg'
+    message: "安全"
+  test002:
+    username: ' '
+    password: '123456'
+    assert: '.invalid-msg'
+    message: "用户名或"
+  test003:
+    username: ''
+    password: '123456'
+    assert: '.invalid-msg'
+    message: "用户名或"
+  test004:
+    username: 'guoguoyu123'
+    password: '123456'
+    assert: '.prompt'
+    message: '用户名和密码不'
+  test005:
+    username: 'guodunyu123'
+    password: '123456789'
+    assert: '.prompt'
+    message: '用户名和密码不'
+  test006:
+    username: 'guodunyu123'
+    password: ''
+    assert: ".invalid-msg"
+    message: '填写'
+  test007:
+    username: 'guodunyu123'
+    password: " "
+    assert: ".invalid-msg"
+    message: '填写'
